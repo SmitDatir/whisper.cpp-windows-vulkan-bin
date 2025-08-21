@@ -41,9 +41,24 @@ ffmpeg \
 
 ## Transcribe
 
+https://huggingface.co/ggerganov/whisper.cpp
+
 ```shell
 ./whisper-cli \
     -m "model/ggml-large-v3-turbo-q8_0.bin" \
+    -f "video/1.wav" \
+    -osrt;
+```
+
+## Transcribe w/ VAD
+
+https://huggingface.co/ggml-org/whisper-vad
+
+```shell
+./whisper-cli \
+    -m "model/ggml-large-v3-turbo-q8_0.bin" \
+    --vad \
+    -vm "model/ggml-silero-v5.1.2.bin" \
     -f "video/1.wav" \
     -osrt;
 ```
