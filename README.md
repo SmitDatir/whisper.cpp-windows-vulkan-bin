@@ -2,11 +2,15 @@
 
 Get `whisper.cpp-windows-vulkan.zip` from the [Releases page](https://github.com/jerryshell/whisper.cpp-windows-vulkan-bin/releases)
 
-More usage: [ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)
+## Example: Integration to Subtitle Edit
 
-## Example: download and transcribe YouTube video
+Copy file to `%appdata%\Subtitle Edit\Whisper\Cpp`
 
-Using bash command
+You may need to create the directory manually
+
+## Example: Download and Transcribe YouTube video
+
+Bash command
 
 ## Download video
 
@@ -24,7 +28,7 @@ yt-dlp \
     "${yt_vod_url}";
 ```
 
-## Extract audio and resample
+## Extract audio and Resample
 
 ```shell
 ffmpeg \
@@ -62,3 +66,7 @@ https://huggingface.co/ggml-org/whisper-vad
     -f "video/1.wav" \
     -osrt;
 ```
+
+## More usage
+
+See [ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)
