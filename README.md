@@ -12,7 +12,7 @@ You may need to create the directory manually
 
 Bash command
 
-## Download video
+### Download video
 
 ```shell
 yt_vod_url="https://www.youtube.com/watch?v=UF8uR6Z6KLc";
@@ -28,7 +28,7 @@ yt-dlp \
     "${yt_vod_url}";
 ```
 
-## Extract audio and Resample
+### Extract audio and Resample
 
 ```shell
 ffmpeg \
@@ -43,7 +43,7 @@ ffmpeg \
     "video/1.wav";
 ```
 
-## Transcribe
+### Transcribe
 
 https://huggingface.co/ggerganov/whisper.cpp
 
@@ -54,7 +54,7 @@ https://huggingface.co/ggerganov/whisper.cpp
     -osrt;
 ```
 
-## Transcribe w/ VAD
+### Transcribe w/ VAD
 
 https://huggingface.co/ggml-org/whisper-vad
 
