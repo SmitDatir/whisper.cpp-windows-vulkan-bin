@@ -15,7 +15,6 @@ Bash command
 ### Download video
 
 ```shell
-yt_vod_url="https://www.youtube.com/watch?v=UF8uR6Z6KLc";
 yt-dlp \
     -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" \
     -o "video/1.mp4" \
@@ -25,7 +24,7 @@ yt-dlp \
     --embed-thumbnail \
     --embed-chapters \
     --xattrs \
-    "${yt_vod_url}";
+    "https://www.youtube.com/watch?v=UF8uR6Z6KLc";
 ```
 
 ### Extract audio and Resample
@@ -51,6 +50,7 @@ https://huggingface.co/ggerganov/whisper.cpp
 ./whisper-cli \
     -m "model/ggml-large-v2-q5_0.bin" \
     -f "video/1.wav" \
+    -sns \
     -osrt;
 ```
 
@@ -64,6 +64,7 @@ https://huggingface.co/ggml-org/whisper-vad
     --vad \
     -vm "model/ggml-silero-v5.1.2.bin" \
     -f "video/1.wav" \
+    -sns \
     -osrt;
 ```
 
